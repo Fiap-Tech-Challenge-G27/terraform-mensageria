@@ -5,5 +5,5 @@ resource "aws_sns_topic" "checkout-topic" {
 resource "aws_sns_topic_subscription" "checkout-subscription" {
   topic_arn = aws_sns_topic.checkout-topic.arn
   protocol  = "https"
-  endpoint  = "${data.terraform_remote_state.api-gateway.aws_apigatewayv2_api.techchallenge.api_endpoint"}/orders"
+  endpoint  = "${data.terraform_remote_state.api-gateway.aws_apigatewayv2_api.techchallenge.api_endpoint}/orders"
 }
